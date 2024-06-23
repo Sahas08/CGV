@@ -21,6 +21,19 @@ void polygon(int a, int b, int c , int d)
                 glVertex3fv(vertices[d]);      
                 glEnd();      
 }
+
+void colorcube(void) {
+    polygon(0, 3, 2, 1);
+    polygon(2, 3, 7, 6);
+    polygon(0, 4, 7, 3);
+    polygon(1, 2, 6, 5);
+    polygon(4, 5, 6, 7);
+    polygon(0, 1, 5, 4);
+}
+
+static GLfloat theta[] = {0.0, 0.0, 0.0};
+static GLint axis = 2;
+
 void display(void)
 {
  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
